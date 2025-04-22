@@ -57,18 +57,56 @@ function App() {
 
   return (
     <div className={darkMode ? 'bg-dark text-white' : 'bg-light text-dark'} style={{ transition: "all 0.5s ease-in-out" }}>
-      {/* Theme Toggle Switch */}
-      <div className="toggle-container">
-        <label className="toggle-switch">
-          <input type="checkbox" checked={!darkMode} onChange={toggleTheme} />
-          <span className="slider">
-            <span className="emoji">{darkMode ? '🌙' : '☀️'}</span>
-          </span>
-        </label>
-      </div>
+      <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'} shadow-sm sticky-top`}>
+        <div className="container">
+          <a className="navbar-brand fw-bold" href="#">Prathamesh Kasar</a>
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link active" href="#hero">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#about">About</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#skills">Skills</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#projects">Projects</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Toggle Button Moved Inside Navbar */}
+        <div className="d-flex align-items-center ms-auto me-3">
+          <label className="toggle-switch">
+            <input type="checkbox" checked={!darkMode} onChange={toggleTheme} />
+            <span className="slider">
+              <span className="emoji">{darkMode ? '🌙' : '☀️'}</span>
+            </span>
+          </label>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <header className="container py-5 hero-section">
+      <header id="hero" className="container py-5 hero-section">
         <div className="row align-items-center">
           {/* Left Side - Text Content */}
           <div className="col-md-6" data-aos="fade-right">
@@ -107,7 +145,7 @@ function App() {
       </header>
 
       {/* About + Skills Section */}
-      <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #2c3e50, #4ca1af)", color: "#fff" }}>
+      <section id="about" className="container-fluid py-5" style={{ background: "linear-gradient(to right, #2c3e50, #4ca1af)", color: "#fff" }}>
         <div className="container">
           <div className="row align-items-center">
             {/* About Me */}
@@ -121,7 +159,7 @@ function App() {
             </div>
 
             {/* Skills */}
-            <div className="col-md-6 text-center" data-aos="fade-left">
+            <div id='skills' className="col-md-6 text-center" data-aos="fade-left">
               <h2 className="mb-4">Skills</h2>
               <div className="d-flex flex-wrap justify-content-center gap-4 fs-1 px-3">
                 {/* Programming Languages */}
@@ -158,7 +196,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="container py-5" style={{ background: 'linear-gradient(to right, #000000, #434343)', color: '#fff' }}>
+      <section id='projects' className="container py-5" style={{ background: 'linear-gradient(to right, #000000, #434343)', color: '#fff' }}>
         <h2 className="text-center mb-4" data-aos="fade-down">Projects</h2>
         <div className="row">
           {projects.map((proj, idx) => (
@@ -177,7 +215,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #141e30, #243b55)", color: "#fff" }}>
+      <section id='contact' className="container-fluid py-5" style={{ background: "linear-gradient(to right, #141e30, #243b55)", color: "#fff" }}>
         <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Contact Me</h2>
         <div className="row justify-content-center">
           <div className="col-md-8">
