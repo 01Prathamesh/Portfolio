@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Typewriter } from 'react-simple-typewriter';
 
 const githubPhoto = "https://avatars.githubusercontent.com/u/108261929?v=4";
 
@@ -70,23 +71,37 @@ function App() {
       <header className="container py-5 hero-section">
         <div className="row align-items-center">
           {/* Left Side - Text Content */}
-          <div className="col-md-6 animate__animated animate__fadeInLeft">
-            <h1 className="display-4">Hi, I'm Prathamesh 👋</h1>
-            <p className="lead">
-              A Backend-Focused Full-Stack Developer <br />
-              with hands-on experience across Django, ASP.NET, Spring Boot, FastAPI & Node.js.
+          <div className="col-md-6" data-aos="fade-right">
+            <h1 className="display-4 fw-bold text-gradient">
+              Hi, I'm <span className="highlight-name">Prathamesh</span> 👋
+            </h1>
+            <p className="lead fs-4 mt-3">
+              <Typewriter
+                words={[
+                  'Backend Developer 💻',
+                  'Full Stack Engineer 🔧',
+                  'Web Development | Django | FastAPI | .NET',
+                  'Building Scalable Backends 🚀',
+                ]}
+                loop={0}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={2000}
+              />
             </p>
           </div>
 
           {/* Right Side - Profile Image */}
-          <div className="col-md-6 text-center animate__animated animate__fadeInRight">
-          <img
-            src="https://avatars.githubusercontent.com/01Prathamesh"
-            alt="Prathamesh Kasar"
-            className="rounded-circle shadow-lg animate__animated animate__zoomIn"
-            width="180"
-            height="180"
-          />
+          <div className="col-md-6 text-center" data-aos="fade-left">
+            <img
+              src="https://avatars.githubusercontent.com/01Prathamesh"
+              alt="Prathamesh Kasar"
+              className="rounded-circle shadow-lg profile-hero"
+              width="200"
+              height="200"
+            />
           </div>
         </div>
       </header>
@@ -116,7 +131,7 @@ function App() {
                 <i className="devicon-python-plain colored" title="Python"></i>
                 <i className="devicon-javascript-plain colored" title="JavaScript"></i>
                 <i className="devicon-java-plain colored" title="Java"></i>
-                
+
                 {/* Frameworks */}
                 <i className="devicon-nodejs-plain colored" title="Node.js"></i>
                 <i className="devicon-react-original colored" title="ReactJS"></i>
