@@ -79,6 +79,35 @@ function App() {
           ))}
         </div>
       </section>
+
+      <section className="container my-5">
+        <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Contact Me</h2>
+        <div className="row justify-content-center">
+          <div className="col-md-8">
+            <form
+              action="mailto:prathameshkasar.work@gmail.com"
+              method="POST"
+              encType="text/plain"
+              className="animate__animated animate__fadeInUp"
+            >
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">Name</label>
+                <input type="text" className="form-control" id="name" name="Name" required />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">Email address</label>
+                <input type="email" className="form-control" id="email" name="Email" required />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">Message</label>
+                <textarea className="form-control" id="message" name="Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" className="btn btn-outline-light">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
