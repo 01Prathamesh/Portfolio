@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleTheme = () => setDarkMode(!darkMode);
+
   return (
-    <div className="bg-dark text-white min-vh-100">
+    <div
+        className={darkMode ? "bg-dark text-white" : "bg-light text-dark"}
+        style={{ transition: "all 0.5s ease-in-out" }}
+      >
+      {/* Toggle Button */}
+      <div className="toggle-container">
+        <label className="toggle-switch">
+          <input type="checkbox" checked={!darkMode} onChange={toggleTheme} />
+          <span className="slider">
+            <span className="emoji">{darkMode ? '🌙' : '☀️'}</span>
+          </span>
+        </label>
+      </div>
+
+
+
       {/* Hero Section */}
       <header className="text-center py-5">
         <h1 className="display-4 animate__animated animate__fadeInDown">
@@ -67,12 +86,12 @@ function App() {
             },
           ].map((proj, idx) => (
             <div className="col-md-4 mb-4" key={idx}>
-              <div className="card h-100 bg-dark text-white border-light animate__animated animate__fadeInUp">
+              <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} animate__animated animate__fadeInUp`}>
                 <div className="card-body">
                   <h5 className="card-title">{proj.title}</h5>
                   <p className="card-text">{proj.desc}</p>
                   <p><strong>Tech:</strong> {proj.tech}</p>
-                  <a href={proj.github} className="btn btn-outline-light" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href={proj.github} className={`btn btn-outline-${darkMode ? 'light' : 'dark'}`} target="_blank" rel="noreferrer">GitHub</a>
                 </div>
               </div>
             </div>
@@ -80,6 +99,7 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section className="container my-5">
         <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Contact Me</h2>
         <div className="row justify-content-center">
@@ -102,37 +122,23 @@ function App() {
                 <label htmlFor="message" className="form-label">Message</label>
                 <textarea className="form-control" id="message" name="Message" rows="4" required></textarea>
               </div>
-              <button type="submit" className="btn btn-outline-light">Send</button>
+              <button type="submit" className={`btn btn-outline-${darkMode ? 'light' : 'dark'}`}>Send</button>
             </form>
           </div>
         </div>
       </section>
 
-      <footer className="bg-secondary text-light py-4 mt-5">
+      {/* Footer */}
+      <footer className={`${darkMode ? 'bg-secondary text-light' : 'bg-light text-dark'} py-4 mt-5`}>
         <div className="container text-center">
           <div className="mb-3">
-            <a
-              href="https://github.com/01Prathamesh"
-              target="_blank"
-              rel="noreferrer"
-              className="mx-3 text-light"
-            >
+            <a href="https://github.com/01Prathamesh" target="_blank" rel="noreferrer" className="mx-3 text-reset">
               <i className="bi bi-github fs-4"></i>
             </a>
-            <a
-              href="https://www.linkedin.com/in/prathamesh-kasar"
-              target="_blank"
-              rel="noreferrer"
-              className="mx-3 text-light"
-            >
+            <a href="https://www.linkedin.com/in/prathamesh-kasar" target="_blank" rel="noreferrer" className="mx-3 text-reset">
               <i className="bi bi-linkedin fs-4"></i>
             </a>
-            <a
-              href="https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              className="mx-3 text-light"
-            >
+            <a href="https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing" target="_blank" rel="noreferrer" className="mx-3 text-reset">
               <i className="bi bi-file-earmark-person fs-4"></i>
             </a>
           </div>
