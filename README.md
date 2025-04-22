@@ -2,7 +2,7 @@
 
 A fully responsive, animated portfolio built using **ReactJS**, showcasing my skills, tech stack, and featured projects. ✨
 
-🔗 **Live Demo**: [https://portfolio-three-sand-44.vercel.app](https://portfolio-three-sand-44.vercel.app)
+🔗 **Live Demo**: [https://prathamesh-kasar-portfolio.vercel.app/](https://prathamesh-kasar-portfolio.vercel.app/)
 
 ![Portfolio Banner](https://avatars.githubusercontent.com/01Prathamesh)
 
