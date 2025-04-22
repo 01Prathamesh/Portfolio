@@ -54,6 +54,7 @@ function App() {
     }
   ];
 
+  const sectionStyle = (dark, light) => ({ background: darkMode ? dark : light, color: darkMode ? '#fff' : '#111' });
 
   return (
     <div className={darkMode ? 'bg-dark text-white' : 'bg-light text-dark'} style={{ transition: "all 0.5s ease-in-out" }}>
@@ -106,7 +107,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <header id="hero" className="container py-5 hero-section">
+      <header id="hero" className="container py-5 hero-section" style={sectionStyle("#0f2027", "#e6f0ff")}>
         <div className="row align-items-center">
           {/* Left Side - Text Content */}
           <div className="col-md-6" data-aos="fade-right">
@@ -145,7 +146,7 @@ function App() {
       </header>
 
       {/* About + Skills Section */}
-      <section id="about" className="container-fluid py-5" style={{ background: "linear-gradient(to right, #2c3e50, #4ca1af)", color: "#fff" }}>
+      <section id="about" className="container-fluid py-5" style={sectionStyle("linear-gradient(to right, #2c3e50, #4ca1af)", "linear-gradient(to right, #f0f9ff, #e0f7fa)")}>
         <div className="container">
           <div className="row align-items-center">
             {/* About Me */}
@@ -196,7 +197,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id='projects' className="container py-5" style={{ background: 'linear-gradient(to right, #000000, #434343)', color: '#fff' }}>
+      <section id="projects" className="container py-5" style={sectionStyle("#000000", "#f5f5f5")}>
         <h2 className="text-center mb-4" data-aos="fade-down">Projects</h2>
         <div className="row">
           {projects.map((proj, idx) => (
@@ -215,7 +216,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id='contact' className="container-fluid py-5" style={{ background: "linear-gradient(to right, #141e30, #243b55)", color: "#fff" }}>
+      <section id="contact" className="container-fluid py-5" style={sectionStyle("#141e30", "#d0eaff")}>
         <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Contact Me</h2>
         <div className="row justify-content-center">
           <div className="col-md-8">
