@@ -243,6 +243,31 @@ function App() {
         </div>
       </section>
 
+      <section className="container py-5 text-center" style={{ background: "#0f0f0f", color: "#fff" }}>
+        <h2 className="mb-4" data-aos="fade-down">📈 GitHub Activity</h2>
+        {/* GitHub Stats */}
+        <div className="d-flex flex-column flex-md-row justify-content-center gap-4">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=01Prathamesh&show_icons=true&theme=radical"
+            alt="GitHub Stats"
+            className="img-fluid"
+            width="400"
+          />
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=01Prathamesh&layout=compact&theme=radical"
+            alt="Top Languages"
+            className="img-fluid"
+            width="350"
+          />
+          <img
+            src="https://github-readme-streak-stats.herokuapp.com/?user=01Prathamesh&theme=radical"
+            alt="GitHub Streak"
+            className="img-fluid"
+            width="400"
+          />
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className={`${darkMode ? 'bg-secondary text-light' : 'bg-light text-dark'} py-4 mt-5`}>
         <div className="container text-center">
