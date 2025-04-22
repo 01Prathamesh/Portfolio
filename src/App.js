@@ -1,21 +1,58 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const githubPhoto = "https://avatars.githubusercontent.com/u/108261929?v=4";
-const linkedinPhoto = "https://media.licdn.com/dms/image/D4D03AQFQyM2z4tA26g/profile-displayphoto-shrink_200_200/0/1680952340182?e=2147483647&v=beta&t=f9okZT_tJZV3HTsTA7nZREyQ7MHJZbFGZ_w-e4Q3z2Y";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const [profilePic, setProfilePic] = useState(githubPhoto);
 
   const toggleTheme = () => setDarkMode(!darkMode);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProfilePic((prev) => (prev === githubPhoto ? linkedinPhoto : githubPhoto));
-    }, 4000);
-    return () => clearInterval(interval);
+    AOS.init({ duration: 1000 });
   }, []);
+
+  const projects = [
+    {
+      title: "Career Dendrogram Web Application",
+      desc: "Developed a web application to visualize career paths, enabling users to explore various career options through an interactive dendrogram. Features include user account management, CRUD operations for career paths, and responsive design.",
+      tech: "Django, SQLite, HTML, CSS, JavaScript, Python",
+      github: "https://github.com/01Prathamesh/Career_Dendrogram_Project"
+    },
+    {
+      title: "School Blog API",
+      desc: "Created a blog API for a school using FastAPI and MongoDB (Motor) for async operations. Includes CRUD for posts, Pydantic validation, and auto-generated API docs.",
+      tech: "FastAPI, Motor, Pydantic, Uvicorn, Python",
+      github: "https://github.com/01Prathamesh/school_blog_API"
+    },
+    {
+      title: "ECommerce AtoZ",
+      desc: "Django-based web application for an online store with product listings, checkout flow, mock payment, user login, and order tracking.",
+      tech: "Django, Django REST, PostgreSQL/SQLite, HTML/CSS, JavaScript, Bootstrap, Pillow",
+      github: "https://github.com/01Prathamesh/ECommerce_AtoZ"
+    },
+    {
+      title: "Team Communication Platform",
+      desc: "Role-based team chat system with login tracking, inbox messaging, and dashboards for Admin, Project Leader, and Programmer.",
+      tech: "ASP.NET Core, Razor Views, SQLite, C#",
+      github: "https://github.com/01Prathamesh/TeamCommunicationPlatform"
+    },
+    {
+      title: "SciAstra Backend API",
+      desc: "RESTful APIs for courses, blogs, and transactions with MySQL integration, error handling, and environment config setup.",
+      tech: "Node.js, Express, MySQL, Postman",
+      github: "https://github.com/01Prathamesh/SciAstraBackendAPI"
+    },
+    {
+      title: "Customer Relationship Manager (Spring Boot)",
+      desc: "Spring Boot CRM for customer management including add/edit/delete. Integrated with MySQL & H2 console for dev/debug.",
+      tech: "Spring Boot, Thymeleaf, MySQL, Java",
+      github: "https://github.com/01Prathamesh/CRM_SpringBoot"
+    }
+  ];
+
 
   return (
     <div className={darkMode ? 'bg-dark text-white' : 'bg-light text-dark'} style={{ transition: "all 0.5s ease-in-out" }}>
@@ -83,31 +120,12 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #000000, #434343)", color: "#fff" }}>
-        <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Projects</h2>
+      <section className="container py-5" style={{ background: 'linear-gradient(to right, #000000, #434343)', color: '#fff' }}>
+        <h2 className="text-center mb-4" data-aos="fade-down">Projects</h2>
         <div className="row">
-          {[
-            {
-              title: "Career Dendrogram",
-              desc: "Visualizes career paths in an interactive web app.",
-              tech: "Django, SQLite, HTML/CSS/JS",
-              github: "https://github.com/01Prathamesh/Career_Dendrogram_Project",
-            },
-            {
-              title: "School Blog API",
-              desc: "Asynchronous FastAPI blog service for schools.",
-              tech: "FastAPI, MongoDB, Pydantic",
-              github: "https://github.com/01Prathamesh/school_blog_API.git",
-            },
-            {
-              title: "ECommerce AtoZ",
-              desc: "Online store with user login & checkout flow.",
-              tech: "Django REST, PostgreSQL, Bootstrap",
-              github: "https://github.com/01Prathamesh/ECommerce_AtoZ",
-            },
-          ].map((proj, idx) => (
-            <div className="col-md-4 mb-4" key={idx}>
-              <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} animate__animated animate__fadeInUp card-hover`}>
+          {projects.map((proj, idx) => (
+            <div className="col-md-4 mb-4" key={idx} data-aos="fade-up">
+              <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} card-hover`}>
                 <div className="card-body">
                   <h5 className="card-title">{proj.title}</h5>
                   <p className="card-text">{proj.desc}</p>
