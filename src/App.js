@@ -7,10 +7,7 @@ function App() {
   const toggleTheme = () => setDarkMode(!darkMode);
 
   return (
-    <div
-        className={darkMode ? "bg-dark text-white" : "bg-light text-dark"}
-        style={{ transition: "all 0.5s ease-in-out" }}
-      >
+    <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} card-hover animate__animated animate__fadeInUp`}style={{ transition: "all 0.5s ease-in-out" }}>
       {/* Toggle Button */}
       <div className="toggle-container">
         <label className="toggle-switch">
@@ -34,7 +31,7 @@ function App() {
       </header>
 
       {/* About + Skills */}
-      <section className="container my-5">
+      <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #2c3e50, #4ca1af)", color: "#fff" }}>
         <div className="row align-items-center">
           <div className="col-md-6 animate__animated animate__fadeInLeft">
             <h2>About Me</h2>
@@ -62,7 +59,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="container my-5">
+      <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #000000, #434343)", color: "#fff" }}>
         <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Projects</h2>
         <div className="row">
           {[
@@ -100,7 +97,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="container my-5">
+      <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #141e30, #243b55)", color: "#fff" }}>
         <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Contact Me</h2>
         <div className="row justify-content-center">
           <div className="col-md-8">

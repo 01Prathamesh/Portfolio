@@ -81,3 +81,12 @@ input:checked + .slider {
 input:checked + .slider .emoji {
   transform: rotate(360deg);
 }
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
