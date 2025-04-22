@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+
+const githubPhoto = "https://avatars.githubusercontent.com/u/108261929?v=4";
+const linkedinPhoto = "https://media.licdn.com/dms/image/D4D03AQFQyM2z4tA26g/profile-displayphoto-shrink_200_200/0/1680952340182?e=2147483647&v=beta&t=f9okZT_tJZV3HTsTA7nZREyQ7MHJZbFGZ_w-e4Q3z2Y";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [profilePic, setProfilePic] = useState(githubPhoto);
 
   const toggleTheme = () => setDarkMode(!darkMode);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProfilePic((prev) => (prev === githubPhoto ? linkedinPhoto : githubPhoto));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} card-hover animate__animated animate__fadeInUp`}style={{ transition: "all 0.5s ease-in-out" }}>
-      {/* Toggle Button */}
+    <div className={darkMode ? 'bg-dark text-white' : 'bg-light text-dark'} style={{ transition: "all 0.5s ease-in-out" }}>
+      {/* Theme Toggle Switch */}
       <div className="toggle-container">
         <label className="toggle-switch">
           <input type="checkbox" checked={!darkMode} onChange={toggleTheme} />
@@ -18,19 +29,32 @@ function App() {
         </label>
       </div>
 
-
-
       {/* Hero Section */}
-      <header className="text-center py-5">
-        <h1 className="display-4 animate__animated animate__fadeInDown">
-          Hi, I'm Prathamesh 👋
-        </h1>
-        <p className="lead animate__animated animate__fadeInUp">
-          A Backend-Focused Full-Stack Developer
-        </p>
+      <header className="container py-5 hero-section">
+        <div className="row align-items-center">
+          {/* Left Side - Text Content */}
+          <div className="col-md-6 animate__animated animate__fadeInLeft">
+            <h1 className="display-4">Hi, I'm Prathamesh 👋</h1>
+            <p className="lead">
+              A Backend-Focused Full-Stack Developer <br />
+              with hands-on experience across Django, ASP.NET, Spring Boot, FastAPI & Node.js.
+            </p>
+          </div>
+
+          {/* Right Side - Profile Image */}
+          <div className="col-md-6 text-center animate__animated animate__fadeInRight">
+          <img
+            src="https://avatars.githubusercontent.com/01Prathamesh"
+            alt="Prathamesh Kasar"
+            className="rounded-circle shadow-lg animate__animated animate__zoomIn"
+            width="180"
+            height="180"
+          />
+          </div>
+        </div>
       </header>
 
-      {/* About + Skills */}
+      {/* About + Skills Section */}
       <section className="container-fluid py-5" style={{ background: "linear-gradient(to right, #2c3e50, #4ca1af)", color: "#fff" }}>
         <div className="row align-items-center">
           <div className="col-md-6 animate__animated animate__fadeInLeft">
@@ -83,7 +107,7 @@ function App() {
             },
           ].map((proj, idx) => (
             <div className="col-md-4 mb-4" key={idx}>
-              <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} animate__animated animate__fadeInUp`}>
+              <div className={`card h-100 ${darkMode ? 'bg-dark text-white border-light' : 'bg-white text-dark border-dark'} animate__animated animate__fadeInUp card-hover`}>
                 <div className="card-body">
                   <h5 className="card-title">{proj.title}</h5>
                   <p className="card-text">{proj.desc}</p>
