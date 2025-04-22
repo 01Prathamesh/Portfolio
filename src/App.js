@@ -243,24 +243,28 @@ function App() {
         </div>
       </section>
 
-      <section className="container py-5 text-center" style={{ background: "#0f0f0f", color: "#fff" }}>
+      {/* GitHub Activity Section */}
+      <section
+        className={`container py-5 text-center ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}
+        id="github"
+      >
         <h2 className="mb-4" data-aos="fade-down">📈 GitHub Activity</h2>
-        {/* GitHub Stats */}
+
         <div className="d-flex flex-column flex-md-row justify-content-center gap-4">
           <img
-            src="https://github-readme-stats.vercel.app/api?username=01Prathamesh&show_icons=true&theme=radical"
+            src={`https://github-readme-stats.vercel.app/api?username=01Prathamesh&show_icons=true&theme=${darkMode ? 'radical' : 'default'}`}
             alt="GitHub Stats"
             className="img-fluid"
             width="400"
           />
           <img
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=01Prathamesh&layout=compact&theme=radical"
+            src={`https://github-readme-stats.vercel.app/api/top-langs/?username=01Prathamesh&layout=compact&theme=${darkMode ? 'radical' : 'default'}`}
             alt="Top Languages"
             className="img-fluid"
             width="350"
           />
           <img
-            src="https://github-readme-streak-stats.herokuapp.com/?user=01Prathamesh&theme=radical"
+            src={`https://github-readme-streak-stats.herokuapp.com/?user=01Prathamesh&theme=${darkMode ? 'radical' : 'default'}`}
             alt="GitHub Streak"
             className="img-fluid"
             width="400"
