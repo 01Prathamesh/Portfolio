@@ -217,29 +217,34 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="container-fluid py-5" style={sectionStyle("#141e30", "#d0eaff")}>
-        <h2 className="text-center mb-4 animate__animated animate__fadeInDown">Contact Me</h2>
+        <h2 className="text-center mb-5 animate__animated animate__fadeInDown">📬 Get in Touch</h2>
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <form
-              action="mailto:prathameshkasar.work@gmail.com"
-              method="POST"
-              encType="text/plain"
-              className="animate__animated animate__fadeInUp"
-            >
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" className="form-control" id="name" name="Name" required />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="email" name="Email" required />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea className="form-control" id="message" name="Message" rows="4" required></textarea>
-              </div>
-              <button type="submit" className={`btn btn-outline-${darkMode ? 'light' : 'dark'}`}>Send</button>
-            </form>
+            <div className={`p-4 rounded shadow ${darkMode ? "bg-dark text-white" : "bg-white text-dark"}`} data-aos="zoom-in">
+              <form
+                action="mailto:prathameshkasar.work@gmail.com"
+                method="POST"
+                encType="text/plain"
+              >
+                <div className="form-floating mb-4">
+                  <input type="text" className="form-control" id="name" name="Name" placeholder="Your Name" required />
+                  <label htmlFor="name"><i className="bi bi-person-fill me-2"></i>Name</label>
+                </div>
+                <div className="form-floating mb-4">
+                  <input type="email" className="form-control" id="email" name="Email" placeholder="name@example.com" required />
+                  <label htmlFor="email"><i className="bi bi-envelope-fill me-2"></i>Email address</label>
+                </div>
+                <div className="form-floating mb-4">
+                  <textarea className="form-control" placeholder="Leave a message here" id="message" name="Message" style={{ height: '150px' }} required></textarea>
+                  <label htmlFor="message"><i className="bi bi-chat-text-fill me-2"></i>Your Message</label>
+                </div>
+                <div className="text-center">
+                  <button type="submit" className={`btn btn-lg btn-outline-${darkMode ? 'light' : 'dark'} px-5`}>
+                    <i className="bi bi-send me-2"></i>Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
