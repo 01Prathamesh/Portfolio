@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# 🚀 Prathamesh Kasar - Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive, animated portfolio built using **ReactJS**, showcasing my skills, tech stack, and featured projects. ✨
 
-## Available Scripts
+🔗 **Live Demo**: [https://portfolio-three-sand-44.vercel.app](https://portfolio-three-sand-44.vercel.app)
 
-In the project directory, you can run:
+![Portfolio Banner](https://avatars.githubusercontent.com/01Prathamesh)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+prathamesh-portfolio/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   ├── App.js
+│   └── App.css
+├── package.json
+└── README.md
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Tech Stack
 
-### `npm run build`
+- **Frontend**: React, Bootstrap 5, TypewriterJS, AOS (Animate On Scroll)
+- **Design**: CSS3, Gradient Backgrounds, Devicon, Bootstrap Icons
+- **Deployment**: Vercel
+- **Version Control**: Git, GitHub
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🌗 **Light / Dark Mode** toggle with emoji animation
+- 🎯 **AOS Scroll Animations** for smooth transitions
+- 🧠 **Skill Icons** (categorized & styled)
+- 💼 **Pinned GitHub Projects** with tech stack and details
+- 📱 **Fully Responsive** on all screen sizes
+- 📨 **Contact Form** integrated with mailto
+- 🔗 **Social Links** for GitHub, LinkedIn, and Resume
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎥 Demo Preview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Portfolio Demo](images/Portfolio.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Available Scripts
 
-## Learn More
+```bash
+npm install     # Install all dependencies
+npm start       # Run in development mode
+npm run build   # Build for production
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ✍️ Author
 
-### Code Splitting
+**Prathamesh Kasar**  
+📍 India  
+🔗 [GitHub](https://github.com/01Prathamesh) • [LinkedIn](https://linkedin.com/in/prathamesh-kasar) • [Resume](https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is open-source and available under the [MIT License](LICENSE).
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Built with 💙 by Prathamesh Kasar
