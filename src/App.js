@@ -222,20 +222,41 @@ function App() {
           <div className="col-md-8">
             <div className={`p-4 rounded shadow ${darkMode ? "bg-dark text-white" : "bg-white text-dark"}`} data-aos="zoom-in">
               <form
-                action="mailto:prathameshkasar.work@gmail.com"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSfQ3Txy2hsiAV9Ap1XeOfaJv5QcaC5LEtSjdqjAz1hzLe9vgw/formResponse"
                 method="POST"
-                encType="text/plain"
+                target="_blank"
               >
                 <div className="form-floating mb-4">
-                  <input type="text" className="form-control" id="name" name="Name" placeholder="Your Name" required />
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    name="entry.1791844630"
+                    placeholder="Your Name"
+                    required
+                  />
                   <label htmlFor="name"><i className="bi bi-person-fill me-2"></i>Name</label>
                 </div>
                 <div className="form-floating mb-4">
-                  <input type="email" className="form-control" id="email" name="Email" placeholder="name@example.com" required />
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    name="entry.14260939"
+                    placeholder="name@example.com"
+                    required
+                  />
                   <label htmlFor="email"><i className="bi bi-envelope-fill me-2"></i>Email address</label>
                 </div>
                 <div className="form-floating mb-4">
-                  <textarea className="form-control" placeholder="Leave a message here" id="message" name="Message" style={{ height: '150px' }} required></textarea>
+                  <textarea
+                    className="form-control"
+                    placeholder="Leave a message here"
+                    id="message"
+                    name="entry.1122207592"
+                    style={{ height: '150px' }}
+                    required
+                  ></textarea>
                   <label htmlFor="message"><i className="bi bi-chat-text-fill me-2"></i>Your Message</label>
                 </div>
                 <div className="text-center">
