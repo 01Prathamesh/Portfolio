@@ -1,10 +1,11 @@
+/* Global Styling */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Toggle Switch */
+/* Theme Toggle Switch */
 .toggle-container {
   position: fixed;
   top: 1rem;
@@ -50,6 +51,23 @@ input:checked + .slider .emoji {
   transform: rotate(360deg);
 }
 
+/* Gradient Text for "Prathamesh" only */
+.highlight-name {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text; /* 👈 Added standard version */
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 /* Card Hover Effect */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -61,15 +79,7 @@ input:checked + .slider .emoji {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #fff;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-/* About & Skills Section */
+/* About + Skills Section */
 .about-skills {
   background: linear-gradient(135deg, #283c86, #45a247);
   color: #fff;
@@ -100,4 +110,22 @@ footer a {
 
 footer a:hover {
   color: #fff;
+}
+
+/* Project Buttons */
+.btn-outline-dark,
+.btn-outline-light {
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+/* Profile Picture in Hero */
+.profile-hero {
+  border: 4px solid #00d8ff;
+  transition: transform 0.3s ease;
+}
+
+.profile-hero:hover {
+  transform: scale(1.05);
 }
