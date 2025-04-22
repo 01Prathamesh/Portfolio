@@ -256,6 +256,65 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="container-fluid py-5" style={sectionStyle("#141e30", "#d0eaff")}>
         <h2 className="text-center mb-5 animate__animated animate__fadeInDown">📬 Get in Touch</h2>
+
+        {/* Contact Details */}
+        <div className="container mb-5" data-aos="fade-up">
+          <div className={`row justify-content-center p-4 rounded-4 shadow-lg ${darkMode ? 'bg-dark text-white' : 'bg-white text-dark'}`}>
+            <div className="col-md-10">
+              <div className="row row-cols-1 row-cols-md-2 g-4 text-start">
+
+                {/* GitHub */}
+                <div className="col d-flex align-items-center gap-3">
+                  <i className="bi bi-github fs-3"></i>
+                  <div>
+                    <strong>GitHub</strong>
+                    <br />
+                    <a href="https://github.com/01Prathamesh" target="_blank" rel="noreferrer" className="text-decoration-none text-reset">
+                      github.com/01Prathamesh
+                    </a>
+                  </div>
+                </div>
+
+                {/* LinkedIn */}
+                <div className="col d-flex align-items-center gap-3">
+                  <i className="bi bi-linkedin fs-3"></i>
+                  <div>
+                    <strong>LinkedIn</strong>
+                    <br />
+                    <a href="https://www.linkedin.com/in/prathamesh-kasar" target="_blank" rel="noreferrer" className="text-decoration-none text-reset">
+                      prathamesh-kasar
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="col d-flex align-items-center gap-3">
+                  <i className="bi bi-envelope-fill fs-3"></i>
+                  <div>
+                    <strong>Email</strong>
+                    <br />
+                    <a href="mailto:prathameshkasar.work@gmail.com" className="text-decoration-none text-reset">
+                      prathameshkasar.work@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="col d-flex align-items-center gap-3">
+                  <i className="bi bi-geo-alt-fill fs-3"></i>
+                  <div>
+                    <strong>Location</strong>
+                    <br />
+                    Jalgaon, Maharashtra, India 🇮🇳
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Contact Form  */}
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className={`p-4 rounded shadow ${darkMode ? "bg-dark text-white" : "bg-white text-dark"}`} data-aos="zoom-in">
