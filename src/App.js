@@ -108,6 +108,9 @@ function App() {
         </div>
       </section>
 
+      <footer className="bg-black text-center py-3 mt-5 text-muted">
+        © {new Date().getFullYear()} Prathamesh Kasar | Made with ❤️
+      </footer>
     </div>
   );
 }
