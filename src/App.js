@@ -108,8 +108,36 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-black text-center py-3 mt-5 text-muted">
-        © {new Date().getFullYear()} Prathamesh Kasar | Made with ❤️
+      <footer className="bg-secondary text-light py-4 mt-5">
+        <div className="container text-center">
+          <div className="mb-3">
+            <a
+              href="https://github.com/01Prathamesh"
+              target="_blank"
+              rel="noreferrer"
+              className="mx-3 text-light"
+            >
+              <i className="bi bi-github fs-4"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prathamesh-kasar"
+              target="_blank"
+              rel="noreferrer"
+              className="mx-3 text-light"
+            >
+              <i className="bi bi-linkedin fs-4"></i>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="mx-3 text-light"
+            >
+              <i className="bi bi-file-earmark-person fs-4"></i>
+            </a>
+          </div>
+          <p className="mb-0">© {new Date().getFullYear()} Prathamesh Kasar | Made with 💙 in India</p>
+        </div>
       </footer>
     </div>
   );
