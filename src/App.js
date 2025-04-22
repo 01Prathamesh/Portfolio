@@ -86,6 +86,9 @@ function App() {
                 <a className="nav-link" href="#skills">Skills</a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#resume">Resume</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#projects">Projects</a>
               </li>
               <li className="nav-item">
@@ -194,6 +197,41 @@ function App() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Resume Section */}
+      <section
+        id="resume"
+        className="container-fluid py-5 text-center"
+        style={{
+          background: darkMode
+            ? "linear-gradient(to right, #232526, #414345)"
+            : "linear-gradient(to right, #e0f7fa, #f0f9ff)",
+          color: darkMode ? "#f1f1f1" : "#0a0a0a",
+        }}
+      >
+        <h2 className="mb-4" data-aos="fade-down">
+          📄 <span style={{ borderBottom: "2px solid #00d4ff" }}>My Resume</span>
+        </h2>
+        <p className="lead mb-4 px-3" data-aos="fade-up">
+          A quick snapshot of my experience, skills, and tech journey — neatly packed into a single document.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className={`btn btn-lg px-5 py-3 fw-semibold ${
+            darkMode ? 'btn-outline-info' : 'btn-outline-dark'
+          } shadow-sm`}
+          style={{
+            borderRadius: "30px",
+            letterSpacing: "1px",
+            transition: "all 0.3s ease-in-out",
+          }}
+          data-aos="zoom-in"
+        >
+          <i className="bi bi-file-earmark-person-fill me-2"></i> View Resume
+        </a>
       </section>
 
       {/* Projects Section */}
