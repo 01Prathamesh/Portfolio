@@ -6,6 +6,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const githubPhoto = "https://avatars.githubusercontent.com/u/108261929?v=4";
 
+
 function App() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -54,6 +55,7 @@ function App() {
     }
   ];
 
+  const [showScreenshots, setShowScreenshots] = useState(false);
   const sectionStyle = (dark, light) => ({ background: darkMode ? dark : light, color: darkMode ? '#fff' : '#111' });
 
   return (
@@ -306,62 +308,120 @@ function App() {
       </section>
 
       {/* Project Demo Videos */}
-        <section
-          id="project-videos"
-          className={`container py-5 ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}
-        >
-          <h3 className="text-center mt-5 mb-4" data-aos="fade-up">
-            🎥 <span style={{ borderBottom: '2px solid #00d4ff' }}>Project Demo Videos</span>
-          </h3>
+      <section
+        id="project-videos"
+        className={`container py-5 ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}
+      >
+        <h3 className="text-center mt-5 mb-4" data-aos="fade-up">
+          🎥 <span style={{ borderBottom: '2px solid #00d4ff' }}>Project Demo Videos</span>
+        </h3>
 
-          <div className="row mt-4">
+        <div className="row mt-4">
+          {[
+            {
+              title: "Career Dendrogram",
+              url: "https://www.youtube.com/embed/p70oAqZrcfc"
+            },
+            {
+              title: "ECommerce AtoZ",
+              url: "https://www.youtube.com/embed/e9MqXj5HTe8"
+            },
+            {
+              title: "SciAstra",
+              url: "https://www.youtube.com/embed/tMiIE3D9NOE"
+            },
+            {
+              title: "Team Communication Platform",
+              url: "https://www.youtube.com/embed/nx__NHE-qPQ"
+            }
+          ].map((video, index) => (
+            <div className="col-md-6 mb-4" key={index}>
+              <div
+                className={`video-card-modern p-4 rounded-4 shadow-lg ${darkMode ? 'bg-dark text-white' : 'bg-white text-dark'}`}
+                data-aos="zoom-in"
+              >
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                  <h5 className="fw-semibold mb-0">{video.title}</h5>
+                  <button
+                    className="open-btn"
+                    onClick={() => window.open(`https://youtu.be/${video.url.split('/').pop()}`, '_blank')}
+                    title="Watch on YouTube"
+                  >
+                    <i className="bi bi-box-arrow-up-right"></i>
+                  </button>
+                </div>
+                <div className="video-frame">
+                  <iframe
+                    src={`${video.url}?autoplay=1&mute=1&loop=1&playlist=${video.url.split("/").pop()}`}
+                    className="styled-video"
+                    title={video.title}
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Project Screenshots */}
+      <section className={`container my-5 ${darkMode ? "dark" : ""}`} id="project-screenshots">
+        <div
+          className="screenshot-toggle"
+          onClick={() => setShowScreenshots(!showScreenshots)}
+        >
+          {showScreenshots ? "🔽 Hide Project Screenshots" : "🖼️ Show Project Screenshots"}
+        </div>
+
+        {showScreenshots && (
+          <div className="screenshot-section">
             {[
               {
                 title: "Career Dendrogram",
-                url: "https://www.youtube.com/embed/p70oAqZrcfc"
-              },
-              {
-                title: "ECommerce AtoZ",
-                url: "https://www.youtube.com/embed/e9MqXj5HTe8"
-              },
-              {
-                title: "SciAstra",
-                url: "https://www.youtube.com/embed/tMiIE3D9NOE"
+                count: 18,
+                path: "https://raw.githubusercontent.com/01Prathamesh/Career_Dendrogram_Project/master/SS/",
+                ext: "jpg"
               },
               {
                 title: "Team Communication Platform",
-                url: "https://www.youtube.com/embed/nx__NHE-qPQ"
+                count: 6,
+                path: "https://raw.githubusercontent.com/01Prathamesh/TeamCommunicationPlatform/main/Screenshot/",
+                ext: "jpg"
+              },
+              {
+                title: "Customer Relationship Manager",
+                count: 4,
+                path: "https://raw.githubusercontent.com/01Prathamesh/Customer-Relationship-Manager/main/SS/",
+                ext: "png"
+              },
+              {
+                title: "School Blog API",
+                count: 5,
+                path: "https://raw.githubusercontent.com/01Prathamesh/school_blog_API/main/ScreenShot/",
+                ext: "png"
               }
-            ].map((video, index) => (
-              <div className="col-md-6 mb-4" key={index}>
-                <div
-                  className={`video-card-modern p-4 rounded-4 shadow-lg ${darkMode ? 'bg-dark text-white' : 'bg-white text-dark'}`}
-                  data-aos="zoom-in"
-                >
-                  <div className="d-flex justify-content-between align-items-center mb-2">
-                    <h5 className="fw-semibold mb-0">{video.title}</h5>
-                    <button
-                      className="open-btn"
-                      onClick={() => window.open(`https://youtu.be/${video.url.split('/').pop()}`, '_blank')}
-                      title="Watch on YouTube"
-                    >
-                      <i className="bi bi-box-arrow-up-right"></i>
-                    </button>
-                  </div>
-                  <div className="video-frame">
-                    <iframe
-                      src={`${video.url}?autoplay=1&mute=1&loop=1&playlist=${video.url.split("/").pop()}`}
-                      className="styled-video"
-                      title={video.title}
-                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
+            ].map((project, idx) => (
+              <div key={idx} className="mb-5">
+                <h5 className="mb-3 fw-semibold">{project.title}</h5>
+                <div className="screenshot-gallery">
+                  {Array.from({ length: project.count }).map((_, i) => (
+                    <div className="screenshot-item" key={i}>
+                      <img
+                        src={`${project.path}${i + 1}.${project.ext}`}
+                        alt={`${project.title} Screenshot ${i + 1}`}
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        )}
+      </section>
+
+
 
       {/* Contact Section */}
       <section id="contact" className="container-fluid py-5" style={sectionStyle("#141e30", "#d0eaff")}>
