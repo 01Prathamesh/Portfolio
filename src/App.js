@@ -158,7 +158,8 @@ function App() {
               <p style={{ lineHeight: "1.8" }}>
                 I'm a final-year Computer Science student with hands-on experience building scalable full-stack applications. <br />
                 I specialize in backend technologies like Django, ASP.NET Core, Spring Boot, FastAPI, and Node.js. <br />
-                Passionate about solving real-world problems and crafting impactful software.
+                Passionate about solving real-world problems and crafting impactful software.<br/><br/>
+                <strong>🎓 B.Tech in Computer Science & Engineering (2021–2025)</strong><br/>from <strong>G H Raisoni College of Engineering and Management, Jalgaon</strong>.
               </p>
             </div>
 
