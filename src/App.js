@@ -305,6 +305,64 @@ function App() {
         </div>
       </section>
 
+      {/* Project Demo Videos */}
+        <section
+          id="project-videos"
+          className={`container py-5 ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}
+        >
+          <h3 className="text-center mt-5 mb-4" data-aos="fade-up">
+            🎥 <span style={{ borderBottom: '2px solid #00d4ff' }}>Project Demo Videos</span>
+          </h3>
+
+          <div className="row mt-4">
+            {[
+              {
+                title: "Career Dendrogram",
+                url: "https://www.youtube.com/embed/p70oAqZrcfc"
+              },
+              {
+                title: "ECommerce AtoZ",
+                url: "https://www.youtube.com/embed/e9MqXj5HTe8"
+              },
+              {
+                title: "SciAstra",
+                url: "https://www.youtube.com/embed/tMiIE3D9NOE"
+              },
+              {
+                title: "Team Communication Platform",
+                url: "https://www.youtube.com/embed/nx__NHE-qPQ"
+              }
+            ].map((video, index) => (
+              <div className="col-md-6 mb-4" key={index}>
+                <div
+                  className={`video-card-modern p-4 rounded-4 shadow-lg ${darkMode ? 'bg-dark text-white' : 'bg-white text-dark'}`}
+                  data-aos="zoom-in"
+                >
+                  <div className="d-flex justify-content-between align-items-center mb-2">
+                    <h5 className="fw-semibold mb-0">{video.title}</h5>
+                    <button
+                      className="open-btn"
+                      onClick={() => window.open(`https://youtu.be/${video.url.split('/').pop()}`, '_blank')}
+                      title="Watch on YouTube"
+                    >
+                      <i className="bi bi-box-arrow-up-right"></i>
+                    </button>
+                  </div>
+                  <div className="video-frame">
+                    <iframe
+                      src={`${video.url}?autoplay=1&mute=1&loop=1&playlist=${video.url.split("/").pop()}`}
+                      className="styled-video"
+                      title={video.title}
+                      allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
       {/* Contact Section */}
       <section id="contact" className="container-fluid py-5" style={sectionStyle("#141e30", "#d0eaff")}>
         <h2 className="text-center mb-5 animate__animated animate__fadeInDown">📬 Get in Touch</h2>
