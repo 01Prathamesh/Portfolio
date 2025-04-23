@@ -271,7 +271,7 @@ function App() {
           A quick snapshot of my experience, skills, and tech journey — neatly packed into a single document.
         </p>
         <a
-          href="https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing"
+          href="https://drive.google.com/file/d/1frXb24ETZwmhmivNKtw8RIA8gzQIzYAz/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
           className={`btn btn-lg px-5 py-3 fw-semibold ${
@@ -576,7 +576,7 @@ function App() {
             <a href="https://www.linkedin.com/in/prathamesh-kasar" target="_blank" rel="noreferrer" className="mx-3 text-reset">
               <i className="bi bi-linkedin fs-4"></i>
             </a>
-            <a href="https://drive.google.com/file/d/1dOYtfXw9zFRazJPfqdvMAZaaONYrzS8m/view?usp=sharing" target="_blank" rel="noreferrer" className="mx-3 text-reset">
+            <a href="https://drive.google.com/file/d/1frXb24ETZwmhmivNKtw8RIA8gzQIzYAz/view?usp=sharing" target="_blank" rel="noreferrer" className="mx-3 text-reset">
               <i className="bi bi-file-earmark-person fs-4"></i>
             </a>
           </div>
