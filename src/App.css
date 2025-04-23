@@ -189,24 +189,55 @@ footer a:hover {
   transform: scale(1.05);
 }
 
+/* ===== Project Demo Video Card ===== */
 .video-card-modern {
-  background: linear-gradient(135deg, #00d4ff0a, #ffffff06);
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  position: relative;
+  background: linear-gradient(135deg, #bcd3ff, #2a5298);
+  border: 1px solid rgba(0, 212, 255, 0.15);
   border-radius: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.dark .video-card-modern {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Hover effect for both modes */
 .video-card-modern:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 212, 255, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 212, 255, 0.35);
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  color: #fff;
 }
 
+/* Glowing animated border */
+.video-card-modern::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+  z-index: -1;
+  filter: blur(10px);
+  animation: glowRotate 6s linear infinite;
+  border-radius: 20px;
+}
+
+@keyframes glowRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Video Frame & Video Styling ===== */
 .video-frame {
   overflow: hidden;
   border-radius: 16px;
   width: 100%;
   height: 300px;
-  position: relative;
+  background: #000;
 }
 
 .styled-video {
@@ -214,14 +245,16 @@ footer a:hover {
   height: 100%;
   border: none;
   border-radius: 16px;
+  object-fit: cover;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .video-card-modern:hover .styled-video {
-  transform: scale(1.04);
-  filter: brightness(1.1);
+  transform: scale(1.03);
+  filter: brightness(1.1) contrast(1.05);
 }
 
+/* ===== Open in YouTube Button ===== */
 .open-btn {
   background: linear-gradient(to right, #00c6ff, #0072ff);
   border: none;
