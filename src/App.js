@@ -570,14 +570,17 @@ function App() {
       <footer className={`${darkMode ? 'bg-secondary text-light' : 'bg-light text-dark'} py-4 mt-5`}>
         <div className="container text-center">
           <div className="mb-3">
-            <a href="https://github.com/01Prathamesh" target="_blank" rel="noreferrer" className="mx-3 text-reset">
+            <a href="https://github.com/01Prathamesh" target="_blank" rel="noreferrer" className="mx-3 text-reset" title='GitHub'>
               <i className="bi bi-github fs-4"></i>
             </a>
-            <a href="https://www.linkedin.com/in/prathamesh-kasar" target="_blank" rel="noreferrer" className="mx-3 text-reset">
+            <a href="https://www.linkedin.com/in/prathamesh-kasar" target="_blank" rel="noreferrer" className="mx-3 text-reset" title='LinkedIn'>
               <i className="bi bi-linkedin fs-4"></i>
             </a>
-            <a href="https://drive.google.com/file/d/1frXb24ETZwmhmivNKtw8RIA8gzQIzYAz/view?usp=sharing" target="_blank" rel="noreferrer" className="mx-3 text-reset">
+            <a href="https://drive.google.com/file/d/1frXb24ETZwmhmivNKtw8RIA8gzQIzYAz/view?usp=sharing" target="_blank" rel="noreferrer" className="mx-3 text-reset" title='RESUME'>
               <i className="bi bi-file-earmark-person fs-4"></i>
+            </a>
+            <a href="https://www.youtube.com/@PrathameshKasar_work" target="_blank" rel="noreferrer" className="mx-3 text-reset" title='YouTube'>
+              <i className="bi bi-youtube fs-4 "></i>
             </a>
           </div>
           <p className="mb-0">© {new Date().getFullYear()} Prathamesh Kasar <br/> Made with 🧡🤍💚 in <span class="india-text">INDIA</span> 🇮🇳 </p>
