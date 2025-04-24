@@ -475,7 +475,7 @@ function App() {
                   <div>
                     <strong>Location</strong>
                     <br />
-                    Jalgaon, Maharashtra, India 🇮🇳
+                    Jalgaon, Maharashtra, INDIA 🇮🇳
                   </div>
                 </div>
 
@@ -580,7 +580,7 @@ function App() {
               <i className="bi bi-file-earmark-person fs-4"></i>
             </a>
           </div>
-          <p className="mb-0">© {new Date().getFullYear()} Prathamesh Kasar | Made with 💙 in India</p>
+          <p className="mb-0">© {new Date().getFullYear()} Prathamesh Kasar | Made with 🧡🤍💚 in <span class="india-text">INDIA</span> 🇮🇳 </p>
         </div>
       </footer>
     </div>
