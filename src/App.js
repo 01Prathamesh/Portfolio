@@ -4,9 +4,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Typewriter } from 'react-simple-typewriter';
 
-const githubPhoto = "https://avatars.githubusercontent.com/u/108261929?v=4";
-
-
 function App() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -62,7 +59,7 @@ function App() {
     <div className={darkMode ? 'bg-dark text-white' : 'bg-light text-dark'} style={{ transition: "all 0.5s ease-in-out" }}>
       <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'} shadow-sm sticky-top`}>
         <div className="container">
-          <a className="navbar-brand fw-bold" href="#">Prathamesh Kasar</a>
+          <a className="navbar-brand fw-bold" href="https://prathamesh-kasar-portfolio.vercel.app/">Prathamesh Kasar</a>
 
           <button
             className="navbar-toggler"

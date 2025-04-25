@@ -9,6 +9,11 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* section and div margin from top */
+section[id], div[id] {
+  scroll-margin-top: 50px;
+}
+
 /* Theme Toggle Switch */
 .toggle-container {
   position: fixed;
