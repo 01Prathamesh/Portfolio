@@ -148,11 +148,11 @@ function App() {
       </header>
 
       {/* About + Skills Section */}
-      <section id="about" className="container-fluid py-5" style={sectionStyle("linear-gradient(to right, #2c3e50, #4ca1af)", "linear-gradient(to right, #f0f9ff, #e0f7fa)")}>
+      <section className="container-fluid py-5" style={sectionStyle("linear-gradient(to right, #2c3e50, #4ca1af)", "linear-gradient(to right, #f0f9ff, #e0f7fa)")}>
         <div className="container">
           <div className="row align-items-center">
             {/* About Me */}
-            <div className="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+            <div id="about" className="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
               <h2 className="mb-3">About Me</h2>
               <p style={{ lineHeight: "1.8" }}>
                 I'm a passionate and enthusiastic final-year <strong>Computer Science Engineering</strong> student, currently pursuing my <strong>B.Tech (2021–2025)</strong> from <strong>G H Raisoni College of Engineering and Management, Jalgaon</strong>. <br /><br />
