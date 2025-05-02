@@ -1,0 +1,92 @@
+/* === Resume Section Styles === */
+#resume {
+padding: 5rem 2rem;
+transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* === Header Styling === */
+#resume h2 {
+font-size: 2.5rem;
+font-weight: 700;
+margin-bottom: 1.5rem;
+letter-spacing: 1px;
+transition: color 0.3s ease;
+}
+
+#resume h2 span {
+padding-bottom: 0.2rem;
+border-color: #00d4ff;
+}
+
+/* === Lead Text Styling === */
+#resume p.lead {
+font-size: 1.2rem;
+max-width: 700px;
+margin: 0 auto 2rem;
+transition: color 0.3s ease;
+}
+
+/* === Button Styles === */
+#resume .btn {
+font-size: 1.1rem;
+border-width: 2px;
+border-radius: 30px;
+letter-spacing: 1px;
+transition: all 0.3s ease;
+}
+
+#resume .btn:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+/* === Dark Mode === */
+body.dark-mode #resume {
+background: linear-gradient(to right,#0873a5,#6f0082,#4b0082);    /* Darker gradient for dark mode */
+color: #f1f1f1;
+}
+
+body.dark-mode #resume .btn-outline-info {
+border-color: #00d4ff;
+color: #00d4ff;
+}
+
+body.dark-mode #resume .btn-outline-info:hover {
+background-color: #00d4ff;
+color: #0a0a0a;
+border-color: #00d4ff;
+}
+
+/* === Light Mode === */
+body.light-mode #resume {
+background: linear-gradient(to right, #fc00ff, #00dbde); /* Light gradient for light mode */
+color: #0a0a0a;
+}
+
+body.light-mode #resume .btn-outline-dark {
+border-color: #0a0a0a;
+color: #0a0a0a;
+}
+
+body.light-mode #resume .btn-outline-dark:hover {
+background-color: linear-gradient(to right, #8400ff, #0088ff);
+color: #ffffff;
+border-color: #0a0a0a;
+}
+
+/* === Responsive Text === */
+@media (max-width: 768px) {
+#resume h2 {
+    font-size: 2rem;
+}
+
+#resume p.lead {
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+#resume .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+}
+}

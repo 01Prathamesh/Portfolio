@@ -1,0 +1,145 @@
+/* Main Section */
+#contact {
+background: linear-gradient(to right, #0873a5, #6f0082, #4b0082);
+padding: 4rem 1rem;
+color: var(--text-color);
+transition: background 0.5s ease, color 0.5s ease;
+text-align: center;
+}
+
+#contact h2 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 3rem;
+color: inherit;
+}
+
+/* Contact Info Box */
+.contact-box {
+background-color: var(--box-bg);
+border-radius: 1rem;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+padding: 2rem;
+margin: 2rem auto;
+max-width: 1000px;
+color: var(--text-color);
+}
+
+.contact-row {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+margin-bottom: 2rem;
+}
+
+.contact-item {
+flex: 1 1 250px;
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+text-align: left;
+}
+
+.contact-item i {
+font-size: 2rem;
+color: var(--accent-color);
+}
+
+.contact-item a {
+text-decoration: none;
+color: var(--text-color);
+}
+
+/* Form Styling */
+form {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+label {
+font-weight: 600;
+margin-bottom: 0.5rem;
+display: block;
+text-align: left;
+}
+
+.form-control {
+width: 100%;
+padding: 1rem;
+font-size: 1rem;
+border-radius: 8px;
+border: 1px solid var(--input-border);
+background: var(--input-bg);
+color: var(--text-color);
+transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-control:focus {
+border-color: var(--accent-color);
+background-color: var(--input-focus-bg);
+outline: none;
+}
+
+/* Submit Button */
+button[type='submit'] {
+background: transparent;
+color: var(--accent-color);
+border: 2px solid var(--accent-color);
+padding: 0.75rem 2rem;
+font-weight: bold;
+font-size: 1rem;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+button[type='submit']:hover {
+background-color: var(--accent-color);
+color: #fff;
+}
+
+/* GitHub Section */
+#github {
+padding: 4rem 1rem;
+background: linear-gradient(to right, #0873a5, #6f0082, #4b0082);
+text-align: center;
+color: var(--text-color);
+}
+
+#github h2 {
+font-size: 2rem;
+font-weight: bold;
+margin-bottom: 2rem;
+}
+
+#github img {
+max-width: 100%;
+border-radius: 10px;
+margin: 1rem;
+box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Variables */
+body.dark #contact,
+body.dark #github {
+--box-bg: #1f1f1f;
+--accent-color: #00d4ff;
+--input-bg: #2c2c2c;
+--input-border: #444;
+--input-focus-bg: #333;
+--text-color: #fff;
+}
+
+/* Light Mode Variables */
+body:not(.dark) #contact,
+body:not(.dark) #github {
+  background: linear-gradient(to right, #fc00ff, #00dbde);
+  --box-bg: #ffffff;
+  --accent-color: #0873a5;
+  --input-bg: #f5f5f5;
+  --input-border: #ccc;
+  --input-focus-bg: #eaeaea;
+  --text-color: #000;
+}
