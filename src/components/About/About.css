@@ -1,0 +1,80 @@
+/* === About Section Skills === */
+body.light-mode .about-skills {
+background: linear-gradient(to right, #fc00ff, #00dbde);
+color: #fff;
+transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* === Dark Mode Specific Styles === */
+body.dark-mode .about-skills {
+background: linear-gradient(to right,#0873a5,#6f0082,#4b0082);
+color: #e0e0e0;
+}
+
+/* === Skill Icon Styles === */
+.skill-icon img {
+width: 40px;
+height: 40px;
+display: block;
+}
+
+.skill-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+position: relative;
+transition: transform 0.2s ease, filter 0.3s ease;
+cursor: pointer;
+z-index: 10;
+}
+
+/* === Skill Icon Hover Effect === */
+.skill-icon:hover {
+transform: scale(1.3);
+filter: drop-shadow(0 0 5px #00d4ff);
+}
+
+/* === Skill Icon Tooltip === */
+.skill-icon::after {
+content: attr(data-title);
+position: absolute;
+bottom: -1.8rem;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0, 0, 0, 0.8);
+color: #fff;
+padding: 4px 10px;
+font-size: 0.75rem;
+border-radius: 4px;
+white-space: nowrap;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease;
+}
+
+.skill-icon:hover::after {
+opacity: 1;
+}
+
+/* === Responsive Adjustments === */
+.skills-wrapper {
+overflow: visible;
+position: relative;
+}
+
+/* === Dark Mode Overrides === */
+body.dark-mode .skill-icon:hover {
+filter: drop-shadow(0 0 5px #00bcd4); /* Slightly lighter shadow in dark mode */
+}
+
+/* === Light Mode Text Color Adjustments === */
+body.light-mode .about-skills {
+color: #111;
+}
+
+/* === Dark Mode Text Color Adjustments === */
+body.dark-mode .about-skills {
+color: #dcdcdc;
+}

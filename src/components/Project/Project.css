@@ -1,0 +1,212 @@
+/* === Global Wrapper === */
+.project-wrapper {
+width: 100%;
+min-height: 100vh;
+padding: 2rem;
+transition: background 0.4s ease, color 0.4s ease;
+background: linear-gradient(to right, #fc00ff, #00dbde);
+color: #111;
+}
+
+.project-wrapper.dark {
+background: linear-gradient(to right,#0873a5,#6f0082,#4b0082);
+color: #fff;
+}
+
+/* === Section Titles === */
+.section-title {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 2rem;
+font-weight: 700;
+}
+
+/* === Project Grid & Cards === */
+.project-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+}
+
+.project-card {
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid #ccc;
+border-radius: 12px;
+padding: 1.5rem;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+backdrop-filter: blur(6px);
+}
+
+.dark .project-card {
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid #666;
+}
+
+.project-card:hover {
+transform: scale(1.03);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* === GitHub Button === */
+.btn-outline {
+padding: 6px 12px;
+border-radius: 8px;
+border: 2px solid currentColor;
+background: transparent;
+transition: all 0.3s ease;
+text-decoration: none;
+color: inherit;
+font-weight: 600;
+}
+
+.btn-outline:hover {
+background-color: var(--accent-color);
+color: #26ff00;
+box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+}
+
+/* === Video Section === */
+.video-section {
+padding: 4rem 0;
+}
+
+.video-card-modern {
+position: relative;
+background: linear-gradient(135deg, #bcd3ff, #2a5298);
+border: 1px solid rgba(0, 212, 255, 0.15);
+border-radius: 20px;
+overflow: hidden;
+transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark .video-card-modern {
+background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+.video-card-modern:hover {
+transform: translateY(-6px);
+box-shadow: 0 20px 45px rgba(0, 212, 255, 0.35);
+background: linear-gradient(135deg, #0072ff, #00c6ff);
+color: #fff;
+}
+
+.video-card-modern::before {
+content: "";
+position: absolute;
+inset: -2px;
+background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+z-index: -1;
+filter: blur(10px);
+animation: glowRotate 6s linear infinite;
+border-radius: 20px;
+}
+
+@keyframes glowRotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* === Video Frame === */
+.video-frame {
+overflow: hidden;
+border-radius: 16px;
+width: 100%;
+height: 300px;
+background: #000;
+}
+
+.styled-video {
+width: 100%;
+height: 100%;
+border: none;
+border-radius: 16px;
+object-fit: cover;
+transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.video-card-modern:hover .styled-video {
+transform: scale(1.03);
+filter: brightness(1.1) contrast(1.05);
+}
+
+/* === Open in YouTube Button === */
+.open-btn {
+background: linear-gradient(to right, #00c6ff, #0072ff);
+border: none;
+padding: 6px 12px;
+border-radius: 8px;
+color: white;
+font-size: 1rem;
+transition: all 0.3s ease;
+box-shadow: 0 0 10px rgba(0, 174, 255, 0.4);
+}
+
+.open-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 0 16px rgba(0, 174, 255, 0.6);
+}
+
+/* === Screenshot Section === */
+.screenshot-toggle-section {
+padding: 4rem 0;
+}
+
+.screenshot-toggle {
+cursor: pointer;
+font-size: 1.5rem;
+font-weight: 600;
+text-align: center;
+margin-bottom: 1rem;
+user-select: none;
+color: #0072ff;
+transition: color 0.3s ease;
+}
+
+.screenshot-toggle:hover {
+color: #00c6ff;
+}
+
+.screenshot-section {
+background: linear-gradient(to right, #dfe9f3, #ffffff);
+border-radius: 20px;
+padding: 2rem;
+transition: all 0.4s ease;
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dark .screenshot-section {
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+color: white;
+}
+
+/* === Screenshot Gallery === */
+.screenshot-gallery {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+gap: 20px;
+padding: 1rem;
+scroll-behavior: smooth;
+}
+
+.screenshot-item {
+flex: 0 0 80%;
+scroll-snap-align: start;
+transition: transform 0.4s ease, box-shadow 0.3s ease;
+border-radius: 12px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.screenshot-item:hover {
+transform: scale(1.03);
+box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.screenshot-item img {
+width: 100%;
+border-radius: 12px;
+object-fit: cover;
+}

@@ -1,0 +1,121 @@
+/* =============================================
+🧭 Navbar Styling – Prathamesh Kasar Portfolio
+============================================= */
+
+/* 🔷 Base Navbar Container */
+.navbar {
+padding: 1rem 2rem;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🔷 Brand / Logo */
+.navbar-brand {
+font-size: 1.75rem;
+font-weight: bold;
+color: inherit; /* Takes from parent (dark/light) */
+transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+color: #00c6ff; /* Light blue hover effect */
+}
+
+/* 🔷 Navbar Links */
+.navbar-nav .nav-link {
+font-size: 1.1rem;
+margin-right: 1rem;
+color: inherit; /* Adjusts automatically with theme */
+transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+color: #00c6ff;
+}
+
+.navbar-nav .nav-link.active {
+font-weight: bold;
+color: #00c6ff;
+}
+
+/* 🔷 Toggle Button (Hamburger) */
+.navbar-toggler {
+border: none;
+background-color: transparent;
+color: inherit; /* Keeps icon color in sync */
+}
+
+/* ==================================
+    🌗 Dark / Light Mode Toggle Switch
+================================== */
+.toggle-switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 30px;
+margin-left: 1rem;
+}
+
+.toggle-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+inset: 0;
+background-color: #cccccc;
+border-radius: 30px;
+cursor: pointer;
+transition: 0.4s;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+}
+
+input:checked + .slider {
+background-color: #111; /* Dark mode active color */
+}
+
+.emoji {
+transition: transform 0.3s ease;
+}
+
+input:checked + .slider .emoji {
+transform: rotate(360deg); /* Cool animation */
+}
+
+/* ============================
+    🎨 Theme-Based Navbar Colors
+============================ */
+
+/* Dark Mode Theme */
+.navbar-dark {
+background: linear-gradient(to right, #00ffe7, #6a00f4, #ff00c8);
+color: #ffffff;
+transition: background-color 1s ease, color 0.3s ease;
+}
+
+/* Light Mode Theme */
+.navbar-light {
+background: linear-gradient(to left, #5614B0, #54b2bd, #DBD65C);
+color: #111;
+transition: background-color 1s ease, color 0.3s ease;
+}
+
+/* ======================
+    🧱 Utility Enhancements
+====================== */
+
+/* Slight Shadow for Depth */
+.navbar.shadow-sm {
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep Navbar on Top During Scroll */
+.navbar.sticky-top {
+position: sticky;
+top: 0;
+z-index: 1020;
+}

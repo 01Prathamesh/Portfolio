@@ -1,0 +1,53 @@
+footer {
+padding: 2rem 1rem 1rem;
+color: var(--footer-text);
+text-align: center;
+transition: background 0.3s ease, color 0.3s ease;
+margin: 0;
+}
+
+footer .social-icons {
+margin-bottom: 1rem;
+}
+
+footer a {
+color: var(--footer-icon);
+margin: 0 1rem;
+font-size: 1.5rem;
+transition: color 0.3s ease, transform 0.3s ease;
+display: inline-block;
+}
+
+footer a:hover {
+color: var(--accent-color);
+transform: scale(1.2);
+}
+
+footer p {
+margin: 0;
+font-size: 0.95rem;
+line-height: 1.6;
+}
+
+.india-text {
+font-weight: bold;
+color: #ff9933;
+}
+
+/* Light mode */
+body:not(.dark) footer {
+    background: linear-gradient(to left, #5614B0, #54b2bd, #DBD65C);
+    --footer-bg: #f8f9fa;
+    --footer-text: #212529;
+    --footer-icon: #343a40;
+    --accent-color: #0873a5;
+  }
+  
+/* Dark mode */
+body.dark footer {
+background: linear-gradient(to right, #00ffe7, #6a00f4, #ff00c8);
+--footer-bg: #1f1f1f;
+--footer-text: #e9ecef;
+--footer-icon: #ffffff;
+--accent-color: #00d4ff;
+}
