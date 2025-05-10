@@ -10,10 +10,10 @@ const About = ({ sectionStyle }) => {
                 <div id="about" className="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
                     <h2 className="mb-3">About Me</h2>
                     <p style={{ lineHeight: "1.8" }}>
-                    I'm a passionate and enthusiastic final-year <strong>Computer Science Engineering</strong> student, currently pursuing my <strong>B.Tech (2021–2025)</strong> from <strong>G H Raisoni College of Engineering and Management, Jalgaon</strong>. <br /><br />
-                    With a strong foundation in programming and a deep interest in building scalable, real-world software, I specialize in backend development using technologies like <strong>Django</strong>, <strong>ASP.NET Core</strong>, <strong>FastAPI</strong>, <strong>Node.js</strong> and <strong>Spring Boot</strong>. <br /><br />
-                    I love designing clean APIs, managing databases, and working with modern dev tools to deliver efficient, production-ready solutions. Whether it's building RESTful APIs, working with cloud platforms, or optimizing backend logic — I thrive on creating impactful tech. <br /><br />
-                    I'm continuously learning, exploring new stacks, and seeking opportunities to contribute to meaningful projects and teams. 🚀
+                    I'm a passionate <strong>Computer Science Engineering</strong> graduate from <strong>G H Raisoni College of Engineering and Management, Jalgaon (2021–2025)</strong>. <br /><br />
+                    With a strong foundation in software development and hands-on experience building real-world applications, I specialize in backend technologies like <strong>Django</strong>, <strong>ASP.NET Core</strong>, <strong>FastAPI</strong>, <strong>Node.js</strong>, and <strong>Spring Boot</strong>. <br /><br />
+                    I enjoy designing scalable APIs, managing databases efficiently, and developing clean, production-ready solutions using modern dev tools and frameworks. <br /><br />
+                    Continuously learning and evolving, I’m now actively seeking opportunities to contribute to impactful teams, solve challenging backend problems, and grow as a professional software engineer. 🚀
                     </p>
                 </div>
 
