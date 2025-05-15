@@ -39,6 +39,34 @@ const Contact = ({ darkMode }) => {
           </div>
 
           <div className="contact-item">
+            <i className="bi bi-youtube"></i>
+            <div>
+              <strong>YouTube</strong><br />
+              <a href="https://www.youtube.com/@PrathameshKasar_work" target="_blank" rel="noreferrer">
+                youtube.com/@PrathameshKasar_work
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-item">
+            <div className="custom-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M14.748 10.123 23.429 0h-2.137l-7.39 8.582L8.385 0H0l9.065 13.177L0 24h2.137l7.743-8.984L15.615 24H24l-9.252-13.877z"/>
+              </svg>
+            </div>
+            <div>
+              <strong>X</strong><br />
+              <a href="https://x.com/PrathameshCode" target="_blank" rel="noreferrer">
+                x.com/PrathameshCode
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-item">
             <i className="bi bi-envelope-fill"></i>
             <div>
               <strong>Email</strong><br />
