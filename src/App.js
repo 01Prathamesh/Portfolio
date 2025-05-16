@@ -53,6 +53,15 @@ function App() {
 
       {/* Footer */}
       <Footer darkMode={darkMode} />
+
+      {/* Hidden image for SEO */}
+      <div style={{ display: 'none' }}>
+        <img src="/images/Prathamesh-Kasar.jpg" alt="Prathamesh Kasar" />
+        <img src="/images/Prathamesh-Kasar-Twitter.jpg" alt="Prathamesh Kasar Twitter" />
+        <img src="/images/Prathamesh-Kasar-LinkedIn.jpeg" alt="Prathamesh Kasar LinkedIn" />
+        <img src="/images/Prathamesh-Kasar-GitHub.jpg" alt="Prathamesh Kasar GitHub" />
+      </div>
+      
     </div>
   );
 }
