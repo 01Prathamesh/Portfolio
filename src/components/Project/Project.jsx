@@ -6,6 +6,12 @@ const Project = ({ darkMode }) => {
 
   const projects = [
     {
+      title: "ShopShakti (Full-Stack E-Commerce)",
+      desc: "A modern full-stack e-commerce web application currently under active development. It features a responsive Angular frontend and a robust ASP.NET Core Web API backend. Key functionalities include user authentication, cart & checkout system, admin dashboard, and dynamic product management. Designed with scalability, performance, and clean architecture in mind.",
+      tech: "Angular 17+, ASP.NET Core Web API, Entity Framework Core, SQL Server, TypeScript",
+      github: "https://github.com/01Prathamesh/ShopShakti"
+    },
+    {
       title: "Career Dendrogram Web Application",
       desc: "Developed a web application to visualize career paths, enabling users to explore various career options through an interactive dendrogram. Features include user account management, CRUD operations for career paths, and responsive design.",
       tech: "Django, SQLite, HTML, CSS, JavaScript, Python",
@@ -68,6 +74,10 @@ const Project = ({ darkMode }) => {
         </h3>
         <div className="row mt-4">
           {[
+            {
+              title: "ShopShakti",
+              url: "https://www.youtube.com/embed/cAOLf5x-35U"
+            },
             {
               title: "Career Dendrogram",
               url: "https://www.youtube.com/embed/p70oAqZrcfc"
