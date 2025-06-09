@@ -76,7 +76,7 @@ const Project = ({ darkMode }) => {
           {[
             {
               title: "ShopShakti",
-              url: "https://www.youtube.com/embed/cAOLf5x-35U"
+              url: "https://www.youtube.com/embed/rlYTUn8ONFk"
             },
             {
               title: "Career Dendrogram",
