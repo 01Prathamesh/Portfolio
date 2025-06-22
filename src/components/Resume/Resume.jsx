@@ -14,7 +14,7 @@ const Resume = ({ darkMode }) => {
         A quick snapshot of my experience, skills, and tech journey — neatly packed into a single document.
       </p>
       <a
-        href="https://drive.google.com/file/d/1UksqrqTD363_ddaa5qZ-uJbsOO46-UaN/view?usp=sharing"
+        href="https://drive.google.com/file/d/1FRMCgRArYSas94urqGu0STE0htXVdq8G/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
         className={`btn btn-lg px-5 py-3 fw-semibold ${
