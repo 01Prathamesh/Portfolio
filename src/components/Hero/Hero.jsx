@@ -16,8 +16,8 @@ const Hero = ({ sectionStyle }) => {
               <Typewriter
                 words={[
                   'Backend Developer 💻',
-                  'Full Stack Engineer 🔧',
-                  'Web Development | Django | FastAPI | .NET',
+                  'Full Stack .NET Engineer 🔧',
+                  'Web Development | .NET | ASP.NET | MS SQL Server',
                   'Building Scalable Backends 🚀',
                 ]}
                 loop={0}
