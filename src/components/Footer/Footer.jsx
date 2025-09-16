@@ -26,7 +26,7 @@ const Footer = ({ darkMode }) => {
             <i className="bi bi-linkedin fs-4"></i>
           </a>
           <a
-            href="https://drive.google.com/file/d/13DJPSwzFAyNcVtFl_gze0TkezOFUyA05/view?usp=sharing"
+            href="https://drive.google.com/file/d/10g37XH8jW_r1LDPTVknxTCrHV6pbJlW6/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="mx-3 text-reset"
